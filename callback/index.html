@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>TikTok Callback</title></head>
+<body>
+<h2>TikTok Authorization</h2>
+<p id="code"></p>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  document.getElementById('code').innerHTML = code ? 
+    '<b>code: ' + code + '</b>' : 'No code found';
+</script>
+</body>
+</html>
